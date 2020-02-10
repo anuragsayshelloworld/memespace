@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form class="form-group" #userForm = "ngForm">
+        {{ userForm.value | json }}
+        <label>fullname</label>
+        <input type="text" class="form-control" name="fname" ngModel>
+        <label>email</label>
+        <input type="text" class="form-control" name="email" ngModel>
+        <label>username</label>
+        <input type="text" class="form-control" name="username" ngModel>
+        <label>password</label>
+        <input type="password" class="form-control" name="password" ngModel>
+        <button class="btn btn-primary">sign up</button>
+      </form>
+      <a routerLink=''>Back to login</a>
+    </div>
+  </div>
+</div>
