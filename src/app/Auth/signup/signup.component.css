@@ -1,0 +1,15 @@
+.container{
+  width: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.btn{
+  margin-left: 180px;
+  margin-top:20px;
+}
+.CustomS{
+  margin-left: 175px;
+}
+.CustomSA{
+  margin-left:80px;
+  width: 300px;
+}
