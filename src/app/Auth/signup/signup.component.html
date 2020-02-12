@@ -1,5 +1,4 @@
 <br/><br/><br/>
-
 <div class="container">
   <div class="row">
     <div class="col">
@@ -20,8 +19,8 @@
         <br/>
         <label>password</label>
         <input type="password" #password ="ngModel" pattern="^\d{10}$" [class.is-invalid]="password.invalid && password.touched" class="form-control" name="password" ngModel required>
-        <small class="text-danger" [class.d-none]="password.valid || password.untouched">Invalid password</small>
-        <button class="btn btn-info CustomSA">sign up</button>
+        <small class="text-danger" [class.d-none]="password.valid || password.untouched">Invalid password | must be 10 letters</small>
+        <button class="btn btn-info CustomSA" [disabled]="userForm.form.invalid">sign up</button>
       </form>
       <hr/>
       <button class="btn btn-primary CustomSA">Continue with facebook</button>
@@ -32,4 +31,3 @@
     </div>
   </div>
 </div>
-{{ userForm.value | json }}
