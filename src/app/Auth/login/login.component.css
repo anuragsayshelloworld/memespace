@@ -1,3 +1,10 @@
+.container-fluid{
+  background-image: url("wallpaper.png");
+  background-size: 100%;
+  background-attachment: fixed;
+  height: fit-content;
+  height: 850px;
+}
 .container{
   width: 500px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

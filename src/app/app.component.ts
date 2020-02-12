@@ -1,5 +1,4 @@
-import { Component, Output } from '@angular/core';
-import { User } from './user';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +7,4 @@ import { User } from './user';
 })
 export class AppComponent {
   title = 'metwork';
- @Output() userModel = new User('anurag', 'anura@gmail.com', 'anuragaa', 'rasengan');
 }

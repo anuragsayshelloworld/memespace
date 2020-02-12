@@ -1,25 +1,26 @@
-<br/><br/><br/>
+<div class="container-fluid">
+  <br/><br/><br/>
 <div class="container">
   <div class="row">
     <div class="col">
-      <form class="form-group" #userForm = "ngForm">
+      <form class="form-group" #userForm = "ngForm" (ngSubmit)="onSubmit()" novalidate>
 
         <br/>
         <label>fullname</label>
-        <input type="text" #name="ngModel" [class.is-invalid]="name.invalid && name.touched" class="form-control" name="fname" ngModel required>
+        <input type="text" #name="ngModel" [class.is-invalid]="name.invalid && name.touched" class="form-control" name="fname" [(ngModel)]="userModel.name" required>
         <small class="text-danger" [class.d-none]="name.valid || name.untouched">Name is required</small>
         <br/>
         <label>email</label>
-        <input type="text" #email="ngModel" [class.is-invalid]="email.invalid && email.touched" class="form-control" name="email" ngModel required>
+        <input type="text" #email="ngModel" [class.is-invalid]="email.invalid && email.touched" class="form-control" name="email" [(ngModel)]="userModel.email" required>
         <small class="text-danger" [class.d-none]="email.valid || email.untouched">email  is required</small>
         <br/>
         <label>username</label>
-        <input type="text" #username="ngModel" [class.is-invalid]="username.invalid && username.touched" class="form-control" name="username" ngModel required>
+        <input type="text" #username="ngModel" [class.is-invalid]="username.invalid && username.touched" class="form-control" name="username" [(ngModel)]="userModel.username" required>
         <small class="text-danger" [class.d-none]="username.valid || username.untouched">username is required</small>
         <br/>
         <label>password</label>
-        <input type="password" #password ="ngModel" pattern="^\d{10}$" [class.is-invalid]="password.invalid && password.touched" class="form-control" name="password" ngModel required>
-        <small class="text-danger" [class.d-none]="password.valid || password.untouched">Invalid password | must be 10 letters</small>
+        <input type="password" #password ="ngModel" [class.is-invalid]="password.invalid && password.touched" class="form-control" name="password" [(ngModel)]="userModel.password" required>
+        <small class="text-danger" [class.d-none]="password.valid || password.untouched">Invalid password</small>
         <button class="btn btn-info CustomSA" [disabled]="userForm.form.invalid">sign up</button>
       </form>
       <hr/>
@@ -30,4 +31,8 @@
       <br/><br/>
     </div>
   </div>
+</div>
+<br/>
+<br/>
+<br/>
 </div>

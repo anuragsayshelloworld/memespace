@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { User } from '/Users/mac/Desktop/metwork/src/app/user';
 
 @Component({
   selector: 'app-signup',
@@ -7,7 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
   constructor() { }
+
+  userModel = new User('Anurag Acharya', 'anuragsayshelloworld@gmail.com', 'anuragironside', 'Rasengan12345');
   ngOnInit() {
   }
 
+  onSubmit() {
+    console.log(this.userModel);
+  }
 }
